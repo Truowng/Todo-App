@@ -1,0 +1,120 @@
+.container {
+  width: 30%;
+  margin: auto;
+  backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.25);
+
+  padding: 40px;
+  border-radius: 20px;
+  animation: blurLights 1.5s ease-in-out infinite alternate-reverse;
+}
+
+.heading {
+  margin-bottom: 50px;
+  font-size: 50px;
+  color: #fff;
+  cursor: default;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  text-align: center;
+}
+
+.input {
+  margin-bottom: 10px;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 15px;
+  /* border-radius: 10px; */
+  background-color: transparent;
+  outline: none;
+  border: transparent 1px solid;
+  border-bottom: #a3a3a3 1px solid;
+  color: white;
+}
+
+.input::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.input:focus {
+  border-bottom: #fff 1px solid;
+}
+
+.submit-btn {
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #bbb;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  transition: all ease 0.5s;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  font-size: 15px;
+}
+.submit-btn:hover {
+  border: 1px solid #bbb;
+  width: 100%;
+  animation: neonLights ease 0.6s infinite alternate-reverse;
+}
+
+@keyframes neonLights {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 0 0 1px rgb(255 255 255 / 25%), 0 0 2px rgb(255 255 255 / 25%),
+      0 0 3px rgb(255 255 255 / 25%), 0 0 4px rgb(255 255 255 / 25%),
+      0 0 5px rgb(255 255 255 / 25%), 0 0 6px rgb(255 255 255 / 25%),
+      0 0 7px rgb(255 255 255 / 25%), 0 0 8px rgb(255 255 255 / 25%),
+      0 0 9px rgb(255 255 255 / 25%), 0 0 10px rgb(255 255 255 / 25%);
+  }
+}
+
+@keyframes blurLights {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 0 0 1px rgb(255 255 255 / 25%), 0 0 2px rgb(255 255 255 / 25%),
+      0 0 3px rgb(255 255 255 / 25%), 0 0 4px rgb(255 255 255 / 25%),
+      0 0 5px rgb(255 255 255 / 25%), 0 0 6px rgb(255 255 255 / 25%),
+      0 0 7px rgb(255 255 255 / 25%), 0 0 8px rgb(255 255 255 / 25%),
+      0 0 9px rgb(255 255 255 / 25%), 0 0 10px rgb(255 255 255 / 25%),
+      0 0 15px rgb(255 255 255 / 25%), 0 0 20px rgb(255 255 255 / 25%),
+      0 0 25px rgb(255 255 255 / 25%), 0 0 30px rgb(255 255 255 / 25%),
+      0 0 35px rgb(255 255 255 / 25%), 0 0 40px rgb(255 255 255 / 25%),
+      0 0 45px rgb(255 255 255 / 25%), 0 0 50px rgb(255 255 255 / 25%),
+      0 0 65px rgb(255 255 255 / 25%), 0 0 70px rgb(255 255 255 / 25%),
+      0 0 85px rgb(255 255 255 / 25%), 0 0 90px rgb(255 255 255 / 25%);
+  }
+}
+
+.input:-internal-autofill-selected {
+  background-color: transparent !important;
+}
+
+.input:-webkit-autofill {
+  background-color: transparent !important;
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  background-color: transparent;
+}

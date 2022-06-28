@@ -1,38 +1,168 @@
+:root {
+  --delete: #ff6961;
+  --fix: #d9d94e;
+}
+
+.delete {
+  background-color: var(--delete);
+  top: -20px;
+  right: 15px;
+}
+
+.fix {
+  background-color: var(--fix);
+  top: -20px;
+  right: 60px;
+}
+
+.action-btn {
+  width: 35px;
+  height: 35px;
+  margin: 0 5px;
+  border-radius: 8px;
+  border: 2px solid white;
+  position: absolute;
+  z-index: 0 !important;
+  transition: all ease 0.2s;
+  background-color: transparent;
+  color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.action-btn::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  bottom: -15px;
+  left: -5px;
+}
+
+.action-btn:hover {
+  transform: translateY(-20px);
+  height: 35px;
+  border-radius: 100%;
+  background-color: #fff;
+}
+
+.fix:hover {
+  color: black;
+}
+
+.delete:hover {
+  color: red;
+  /* border: red solid 2px; */
+}
+
 .App {
   text-align: center;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+  font-family: "Quicksand";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0 !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
+  background-color: #ccc;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: url(https://wallpapershome.com/images/pages/pic_h/23078.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.App-link {
-  color: #61dafb;
+/* Modal */
+
+.ant-modal-root {
+  line-height: unset;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ant-modal {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: #fff !important;
+}
+
+.ant-modal-centered {
+  /* backdrop-filter: blur(10px); */
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  transition: all ease 0.3s;
+}
+
+.ant-modal-content {
+  border-radius: 10px !important;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(20px);
+}
+
+.ant-modal-header {
+  padding: 24px !important  ;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+  background-color: transparent !important;
+  border: 0px solid transparent !important;
+}
+
+.ant-modal-title {
+  color: #fff !important;
+  font-size: 25px !important;
+  font-weight: 500 !important;
+}
+
+.ant-modal-close-x {
+  color: #fff !important;
+  font-weight: bold !important;
+  border-radius: 10px;
+  width: 40px !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  margin-right: 10px !important;
+  margin-top: 10px !important;
+  transition: all ease 0.15s !important;
+}
+
+.ant-modal-close-x:hover {
+  background-color: #fff;
+  color: #000 !important;
+}
+
+.ant-modal-footer {
+  border: 0px solid transparent !important;
+  padding: 20px 16px !important;
+}
+
+.ant-btn {
+  border-radius: 10px !important;
+  border: 1px solid #fff !important;
+  background-color: transparent !important;
+  color: #fff !important;
+  transition: all ease 0.15s !important;
+}
+
+.ant-btn:hover {
+  background-color: #fff !important;
+}
+
+.ant-btn-primary:hover {
+  color: #ea7490 !important;
+}
+
+.ant-btn-default:hover {
+  color: #000 !important;
 }

@@ -68,19 +68,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-### Trang quản lý đầu việc cá nhân
-#### Mô tả dự án
-Dự án là một website mà ở đó mọi người có thể note lại các đầu việc cần làm trong ngày. Các chức năng chính của website là:
- - Đăng nhập
- - Hiển thị giao diện theo role (admin/user)
- - Tìm kiếm note
- - Tạo note
- - Hiển thị danh sách note
- - Cập nhật note
- - Xoá note
-#### Yêu cầu nhỏ:
- - Đã đăng nhập thì sẽ vào luôn dashboard, chưa đăng nhập thì ra trang login
- - Điểm cộng: responsive, animation, setup eslint, prettier, husky, ci/cd, docker dự án.
- - Điểm trừ: inline css, component quá dài, double code.
-

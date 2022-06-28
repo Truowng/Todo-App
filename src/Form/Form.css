@@ -1,0 +1,77 @@
+.ant-picker {
+  background-color: transparent !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  margin-top: 15px !important;
+  border: 2px solid #bbb !important;
+  transition: ease all 0.15s !important;
+}
+
+.ant-picker:hover {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.ant-picker .ant-picker-suffix {
+  color: #fff !important;
+}
+
+.ant-picker-input input {
+  color: #fff !important;
+}
+
+.ant-picker-panel-container {
+  border-radius: 10px !important;
+  margin-bottom: 10px !important;
+  backdrop-filter: blur(50px);
+  background-color: transparent !important;
+  border: 2px solid #fff !important;
+  transition: unset !important;
+  box-shadow: 0 0 1px rgb(255 255 255 / 25%), 0 0 2px rgb(255 255 255 / 25%),
+    0 0 3px rgb(255 255 255 / 25%), 0 0 4px rgb(255 255 255 / 25%),
+    0 0 5px rgb(255 255 255 / 25%), 0 0 6px rgb(255 255 255 / 25%),
+    0 0 7px rgb(255 255 255 / 25%), 0 0 8px rgb(255 255 255 / 25%),
+    0 0 9px rgb(255 255 255 / 25%), 0 0 10px rgb(255 255 255 / 25%),
+    0 0 20px rgb(255 255 255 / 25%), 0 0 25px rgb(255 255 255 / 25%),
+    0 0 30px rgb(255 255 255 / 25%);
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner:before {
+  border-radius: 15px !important;
+}
+
+.ant-picker-content {
+  color: #fff !important;
+}
+
+.ant-picker-header {
+  color: #fff !important;
+  border-bottom: 0px solid transparent !important;
+}
+
+.ant-picker-header-next-btn,
+.ant-picker-header-super-next-btn,
+.ant-picker-header-prev-btn,
+.ant-picker-header-super-prev-btn,
+.ant-picker-cell-inner,
+.ant-picker-today-btn,
+th {
+  color: #fff !important;
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner {
+  color: #000 !important;
+  background-color: #fff !important;
+  border-radius: 50px !important;
+}
+
+.ant-picker-cell:hover:not(.ant-picker-cell-in-view) .ant-picker-cell-inner,
+.ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end)
+  .ant-picker-cell-inner {
+  color: #000 !important;
+}
+
+.ant-picker-footer {
+  border: 0px solid transparent !important;
+}
