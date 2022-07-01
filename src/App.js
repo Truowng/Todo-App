@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import "./App.css";
-import Dashboard from "./Dashboard";
 import Login from "./Login.jsx";
+import "./App.css";
+import { useEffect, useState } from "react";
+import Dashboard from "./Dashboard";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(

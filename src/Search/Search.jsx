@@ -1,3 +1,5 @@
+import React from "react";
+
 const Search = ({ setSearchValueHandler, showSearchVisible }) => {
   return (
     <>
