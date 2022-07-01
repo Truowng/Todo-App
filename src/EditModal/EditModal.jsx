@@ -1,15 +1,25 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+// import Errors from "../Errors/Errors";
 import ErrorsAddEdit from "../Errors/ErrorsAddEdit";
 
-const Form = ({ handleOk }) => {
+const EditForm = ({
+  setIsEditModalVisible,
+  jobs,
+  dataEditJob,
+  setEditJob,
+  saveEditJob,
+}) => {
+  console.log(jobs);
+  const { title, description } = dataEditJob;
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data, errors) => {
-    handleOk(data);
+  const onSubmit = (data) => {
+    setIsEditModalVisible(false);
+    saveEditJob(data);
   };
   console.log(errors);
 
@@ -17,10 +27,10 @@ const Form = ({ handleOk }) => {
     <form className="input-container" onSubmit={handleSubmit(onSubmit)}>
       <input
         className="input"
+        defaultValue={title}
         type="text"
         placeholder="Title"
-        {...register("Title", {
-          required: true,
+        {...register("editTitle", {
           validate: {
             checkTitleLength: (value) => {
               console.log(typeof value.length);
@@ -31,28 +41,32 @@ const Form = ({ handleOk }) => {
               return false;
             },
           },
+          required: true,
         })}
       />
-      {errors.Title?.type && <ErrorsAddEdit type={errors.Title.type} />}
-
+      {errors.editTitle?.type && <ErrorsAddEdit type={errors.editTitle.type} />}
       <input
+        defaultValue={description}
         className="input"
         type="text"
+        name="editDescription"
         placeholder="Description"
-        {...register("Description", {
-          required: true,
+        {...register("editDescription", {
           validate: {
             checkDescriptionLength: (value) => {
+              console.log(typeof value.length);
               if (value.length <= 1000) {
                 return true;
               }
+              console.log("false");
               return false;
             },
           },
+          required: true,
         })}
       />
-      {errors.Description?.type && (
-        <ErrorsAddEdit type={errors.Description.type} />
+      {errors.editDescription?.type && (
+        <ErrorsAddEdit type={errors.editDescription.type} />
       )}
 
       <input className="submit-btn" type="submit" />
@@ -60,4 +74,4 @@ const Form = ({ handleOk }) => {
   );
 };
 
-export default Form;
+export default EditForm;

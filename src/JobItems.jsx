@@ -1,27 +1,56 @@
 import React from "react";
+import { useState } from "react";
+import JobList from "./JobList";
+import EditModal from "./EditModal/EditModal";
+import ConfirmModal from "./Cofirm Modal/ConfirmModal";
+import FloatNotification from "./FloatNotification/FloatNotification";
 
-const JobItems = ({ job, index, handleOnDelete }) => {
+const JobItems = ({
+  job,
+  index,
+  handleOnDelete,
+  showEditModal,
+  setIsConfirmModalVisible,
+  isConfirmModalVisible,
+}) => {
   return (
-    <div className="todo-content">
-      <button
-        onClick={() => alert("Function is in development stage")}
-        className="action-btn fix"
-      >
-        <i class="fa-solid fa-feather-pointed"></i>
-      </button>
-      <button
-        onClick={() => handleOnDelete(job.id)}
-        className="action-btn delete"
-      >
-        <i class="fa-solid fa-trash-can"></i>
-      </button>
-      <div className="todo-content-list">
-        <div className="todo-content-item">
-          <h2 className="content-item-title">{job.title}</h2>
-          <p className="content-item-description">{job.description}</p>
+    <>
+      <div className="todo-content">
+        {localStorage.getItem("name") === "Admin" ? (
+          <>
+            <button
+              onClick={() => showEditModal(job)}
+              className="action-btn other"
+            >
+              <i class="fa-solid fa-feather-pointed"></i>
+            </button>
+            <button
+              onClick={() => {
+                handleOnDelete(job.id);
+                setIsConfirmModalVisible(true);
+              }}
+              className="action-btn delete"
+            >
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </>
+        ) : (
+          ""
+        )}
+
+        <div className="todo-content-list">
+          <div className="todo-content-item">
+            <h2 className="content-item-title">{job.title}</h2>
+            <p className="content-item-description">{job.description}</p>
+          </div>
+          <div className="content-item-date-container">
+            <p className="content-item-month">{job.month}</p>
+            <p className="content-item-date">{job.date}</p>
+            <p className="content-item-year">{job.year}</p>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

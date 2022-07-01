@@ -1,6 +1,6 @@
 :root {
   --delete: #ff6961;
-  --fix: #d9d94e;
+  --other: #d9d94e;
 }
 
 .delete {
@@ -9,10 +9,14 @@
   right: 15px;
 }
 
-.fix {
-  background-color: var(--fix);
+.other {
+  background-color: var(--other);
   top: -20px;
   right: 60px;
+}
+
+.wrapper {
+  position: relative;
 }
 
 .action-btn {
@@ -46,7 +50,7 @@
   background-color: #fff;
 }
 
-.fix:hover {
+.other:hover {
   color: black;
 }
 
@@ -165,4 +169,199 @@ h6 {
 
 .ant-btn-default:hover {
   color: #000 !important;
+}
+
+/* keyframes */
+
+/* @keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scaleX(0.3);
+  }
+  20% {
+    opacity: 0.5;
+    transform: scaleY(0.3);
+  }
+  35% {
+    opacity: 0.8;
+    transform: scaleX(0.8);
+  }
+  55% {
+    opacity: 0.8;
+    transform: scaleY(0.8);
+  }
+  70% {
+    opacity: 0.8;
+    transform: scaleX(0.95) scale(0.95);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1.5);
+  }
+} */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scaleX(0.8);
+  }
+  20% {
+    opacity: 0.5;
+    transform: scaleY(1.05);
+  }
+  55% {
+    opacity: 0.8;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleInTask {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+    border-radius: 50px;
+  }
+  25% {
+    opacity: 0.5;
+    transform: scale(1.05);
+    border-radius: 20px;
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(0.95);
+    border-radius: 10px;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleOutTask {
+  100% {
+    opacity: 0;
+    transform: scale(0.2);
+    border-radius: 50px;
+  }
+  75% {
+    opacity: 0.5;
+    transform: scale(1.05);
+    border-radius: 20px;
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(0.95);
+    border-radius: 10px;
+  }
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  0% {
+    opacity: 0;
+    transform: scale(2);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  75% {
+    opacity: 0.8;
+    transform: scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes neonLights {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 0 0 1px rgb(255 255 255 / 25%), 0 0 2px rgb(255 255 255 / 25%),
+      0 0 3px rgb(255 255 255 / 25%), 0 0 4px rgb(255 255 255 / 25%),
+      0 0 5px rgb(255 255 255 / 25%), 0 0 6px rgb(255 255 255 / 25%),
+      0 0 7px rgb(255 255 255 / 25%), 0 0 8px rgb(255 255 255 / 25%),
+      0 0 9px rgb(255 255 255 / 25%), 0 0 10px rgb(255 255 255 / 25%);
+  }
+}
+
+@keyframes blurLights {
+  0% {
+    box-shadow: none;
+  }
+
+  100% {
+    box-shadow: 0 0 1px rgb(255 255 255 / 25%), 0 0 2px rgb(255 255 255 / 25%),
+      0 0 3px rgb(255 255 255 / 25%), 0 0 4px rgb(255 255 255 / 25%),
+      0 0 5px rgb(255 255 255 / 25%), 0 0 6px rgb(255 255 255 / 25%),
+      0 0 7px rgb(255 255 255 / 25%), 0 0 8px rgb(255 255 255 / 25%),
+      0 0 9px rgb(255 255 255 / 25%), 0 0 10px rgb(255 255 255 / 25%),
+      0 0 15px rgb(255 255 255 / 25%), 0 0 20px rgb(255 255 255 / 25%),
+      0 0 25px rgb(255 255 255 / 25%), 0 0 30px rgb(255 255 255 / 25%),
+      0 0 35px rgb(255 255 255 / 25%), 0 0 40px rgb(255 255 255 / 25%),
+      0 0 45px rgb(255 255 255 / 25%), 0 0 50px rgb(255 255 255 / 25%),
+      0 0 65px rgb(255 255 255 / 25%), 0 0 70px rgb(255 255 255 / 25%),
+      0 0 85px rgb(255 255 255 / 25%), 0 0 90px rgb(255 255 255 / 25%);
+  }
+}
+
+@keyframes jello {
+  11.1% {
+    transform: none;
+  }
+  22.2% {
+    transform: skewX(-12.5deg) skewY(-12.5deg);
+  }
+  33.3% {
+    transform: skewX(6.25deg) skewY(6.25deg);
+  }
+  44.4% {
+    transform: skewX(-3.125deg) skewY(-3.125deg);
+  }
+  55.5% {
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+  }
+  66.6% {
+    transform: skewX(-0.78125deg) skewY(-0.78125deg);
+  }
+  77.7% {
+    transform: skewX(0.390625deg) skewY(0.390625deg);
+  }
+  88.8% {
+    transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+  }
+  100% {
+    transform: none;
+  }
 }

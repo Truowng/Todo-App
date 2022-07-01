@@ -1,0 +1,63 @@
+.float-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 28%;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  border-radius: 10px;
+  animation: scaleInTask ease 0.7s, scaleOutTask ease 0.7s 3s;
+  border: 2px solid #fff;
+  /* box-shadow: 0 0 1px rgb(255 255 255 / 25%), 0 0 2px rgb(255 255 255 / 25%),
+    0 0 3px rgb(255 255 255 / 25%), 0 0 4px rgb(255 255 255 / 25%),
+    0 0 5px rgb(255 255 255 / 25%), 0 0 6px rgb(255 255 255 / 25%),
+    0 0 7px rgb(255 255 255 / 25%), 0 0 8px rgb(255 255 255 / 25%),
+    0 0 9px rgb(255 255 255 / 25%), 0 0 10px rgb(255 255 255 / 25%); */
+}
+
+.float-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.float-img {
+  width: 20%;
+}
+
+.float-btn {
+  border-radius: 50px;
+  border: 1px solid #fff;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  transition: all ease 0.15s;
+}
+
+.float-btn:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.float-btn:hover .float-icon {
+  color: var(--delete);
+}
+
+.float-icon {
+  /* font-size: 40px; */
+  color: #fff;
+}
+
+.float-title {
+  color: #fff;
+}
+
+.float-description {
+  color: #fff;
+  margin-bottom: 0 !important;
+}

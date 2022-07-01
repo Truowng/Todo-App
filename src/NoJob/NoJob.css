@@ -9,8 +9,10 @@
 .no-job-img {
   max-width: 300px;
   width: 100%;
+  animation: jello ease 1.2s;
 }
 
 .no-job-text {
   color: #fff;
+  margin-top: 10px;
 }
