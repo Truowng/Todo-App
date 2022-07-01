@@ -1,6 +1,3 @@
-import React from "react";
-import { set } from "react-hook-form";
-
 const Search = ({ setSearchValueHandler, showSearchVisible }) => {
   return (
     <>

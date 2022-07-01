@@ -1,10 +1,3 @@
-import React from "react";
-import { useState } from "react";
-import JobList from "./JobList";
-import EditModal from "./EditModal/EditModal";
-import ConfirmModal from "./Cofirm Modal/ConfirmModal";
-import FloatNotification from "./FloatNotification/FloatNotification";
-
 const JobItems = ({
   job,
   index,

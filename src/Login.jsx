@@ -1,9 +1,8 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
-import React, { useState } from "react";
 import "./Login.css";
 // import { useState } from "react";
 import Errors from "./Errors/Errors";
-import { useEffect } from "react";
 import FloatNotification from "./FloatNotification/FloatNotification";
 
 export default function Login({ takeLoginState, data }) {

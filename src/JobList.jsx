@@ -1,7 +1,5 @@
-import React from "react";
 import JobItems from "./JobItems";
 import NoJob from "./NoJob/NoJob";
-import ConfirmModal from "./Cofirm Modal/ConfirmModal";
 
 const JobList = ({
   jobs,
